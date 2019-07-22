@@ -1,0 +1,560 @@
+/****************** general ************************/
+
+*{
+     margin: 0;
+    padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+     margin: 0;
+    padding: 0;
+}
+body{height: 100%}
+html{font-size: 62.5%;}
+.wrapper{
+    padding: 0 3rem;
+    margin: 0 auto;
+}
+
+.clearfix{
+    clear: both;
+    overflow: hidden;
+}
+
+ul{list-style: none;}
+
+/****************** fonts ************************/
+
+@font-face {
+    font-family: 'sf_old_republicbold';
+    src: url('../fonts/sf_old_republic_bold-webfont.eot');
+    src: url('../fonts/sf_old_republic_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sf_old_republic_bold-webfont.woff2') format('woff2'),
+         url('../fonts/sf_old_republic_bold-webfont.woff') format('woff'),
+         url('../fonts/sf_old_republic_bold-webfont.ttf') format('truetype'),
+         url('../fonts/sf_old_republic_bold-webfont.svg#sf_old_republicbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'montserratbold';
+    src: url('../fonts/montserrat-bold-webfont.eot');
+    src: url('../fonts/montserrat-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat-bold-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-bold-webfont.woff') format('woff'),
+         url('../fonts/montserrat-bold-webfont.ttf') format('truetype'),
+         url('../fonts/montserrat-bold-webfont.svg#montserratbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'montserratregular';
+    src: url('../fonts/montserrat-regular-webfont.eot');
+    src: url('../fonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat-regular-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-regular-webfont.woff') format('woff'),
+         url('../fonts/montserrat-regular-webfont.ttf') format('truetype'),
+         url('../fonts/montserrat-regular-webfont.svg#montserratregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/****************** header ************************/
+
+.mob-show{display: none;}
+header #open-menu, header #close-menu {
+    position: absolute;
+    right: 1rem;
+    top: 1.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+}
+header nav img{
+    height: 3.5rem;
+}
+header{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255,255,255, 0.9);
+    padding: 1.5rem 0;
+    z-index: 999;
+}
+header #logo{display: inline-block;}
+header #logo img{width: 30rem;}
+header nav{
+    float: right;
+}
+header nav ul{
+    height: 8rem;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+}
+
+header nav ul li{padding-left: 8rem;}
+header nav ul li:first-child{padding-left: 0rem;}
+header nav ul li a{
+    font-family: 'sf_old_republicbold';
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #000;
+    padding-bottom: 1rem;
+    text-decoration: none;
+    display: block;
+    border-bottom: .4rem solid transparent;
+    transition:all .3s ease-in-out;
+}
+header nav ul li a:hover, header nav ul li a.active{
+    border-bottom: .4rem solid #d6be83;
+    color: #d6be83;
+}
+
+/****************** jumbotron ************************/
+
+#jumbotron{
+    margin-top: 12rem;
+    font-family: 'montserratregular';   
+}
+#jumbotron .wrapper{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+}
+#jumbotron .bottle{
+    text-align: right;
+    -moz-flex-grow: 1;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+}
+ #jumbotron .headings{
+    text-align: center;
+    -moz-flex-grow: 3;
+    -webkit-flex-grow: 3;
+    flex-grow: 3;
+    vertical-align: top;
+    padding-top: 15rem;
+}
+#jumbotron .bottle img{
+    width: 66rem;
+    margin-right: -29rem;
+}
+#jumbotron .headings h2{
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    color:#d6be83;
+    font-weight: 400;
+}
+#jumbotron .headings h1{
+    color: #000;
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+#jumbotron #field-bg{
+    width: 100%;
+    margin-top: -50rem;
+}
+#jumbotron .headings h3{
+    text-transform: uppercase;
+    padding-bottom: 3rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+#jumbotron #bottle-img{width: 22rem;}
+#jumbotron p{
+    font-family: 'montserratbold';
+    padding-bottom: 1rem;
+    font-size: 1.4rem;
+    color: #6ba4c2;
+}
+
+/****************** till story ************************/
+
+#till-story{
+    background-color: #000;
+    text-align: center;
+    padding: 3rem;
+    font-family: 'montserratbold';
+}
+#till-story h2{
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    color: #d6be83;
+    padding-bottom: 3rem;
+    font-family: 'montserratregular';
+    font-weight: 400;
+}
+#till-story p{
+    color: #fff;
+    font-size: 1.6rem;
+    font-family: 'montserratregular';
+}
+#till-story .wrapper{
+    position: relative;
+    padding: 3rem;
+    border:.4rem solid #d6be83;
+}
+#till-story img#wheat {
+    position: absolute;
+    top: -2.4rem;
+    left: calc(50% - 1.2rem);
+    width: 2.5rem;
+}
+#till-story img#arrow-down{
+    position: absolute;
+    width: 5rem;
+    left: calc(50% - 3rem);
+    bottom: -6rem;
+}
+
+/****************** images ************************/
+#images{text-align: center;}
+#images div{
+   display: inline-block;
+    vertical-align: top;
+}
+#images div:first-child {
+    width: 36.2%;
+}
+#images div:nth-child(2) {
+    width: 27.1%;
+}
+#images div:last-child{
+    width: 36.2%;
+}
+#images div img{width: 100%;}
+
+/****************** sporting conn ************************/
+#sporting-conn{
+    background-color: #fbfbfb;
+    padding-top: 4rem;
+}
+#sporting-conn h2{
+  font-size: 4rem;
+  font-weight: 400;
+  font-family: 'montserratregular';
+  color: #6ba4c2;
+  text-transform: uppercase;
+}
+#sporting-conn h3{
+    padding-bottom: 2rem;
+    font-weight: 400;
+    font-family: 'montserratregular';
+    color: #6ba4c2;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+}
+#sporting-conn p{
+    font-family: 'montserratregular';
+    color: #000;
+    font-weight: 100;
+    font-size: 1.6rem;
+    padding: 1rem 0 2rem 0;
+}
+#sporting-conn p strong{font-weight: 700;}
+#sporting-conn #ball-img {
+    width: 22rem;
+}
+#sporting-conn .wrapper{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;    
+}
+#sporting-conn .bottle {
+    text-align: right;
+    -moz-flex-grow: 1;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+}
+#sporting-conn .bottle img {
+    width: 66rem;
+    margin-right: -29rem;
+}
+#sporting-conn .headings {
+    text-align: center;
+    -moz-flex-grow: 3;
+    -webkit-flex-grow: 3;
+    flex-grow: 3;
+    vertical-align: top;
+    padding-top: 8rem;
+}
+
+/****************** footer ************************/
+
+footer{
+    text-align: center;
+    background-color: #000;
+    padding: 3rem;
+    font-family: 'sf_old_republicbold';
+}
+ footer h2{
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    color: #d6be83;
+    padding-bottom: 3rem;
+}
+footer .wrapper {
+    position: relative;
+    padding: 3rem;
+    border: .4rem solid #d6be83;
+}
+footer #chat-ico{
+    position: absolute;
+    top: -1.5rem;
+    left: calc(50% - 1.2rem);
+    width: 2.5rem;    
+}
+footer ul li{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 6rem;
+}
+footer ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+footer a:hover img {
+    transform: scale(1.5,1.5);
+}
+footer ul li img{
+    margin: 0 auto;
+    height: 4rem;
+    display: block;
+    padding-bottom: 2rem;
+    transition: all .3s ease-in-out;
+}
+#copyright p, #copyright a{
+    color: #fff;
+    text-align: center;
+    background-color: #000;
+    font-size: 1.5rem;
+    padding: 0 0 2rem 0;
+    font-family: 'sf_old_republicbold';
+}
+#copyright a{
+    border-bottom:1px solid #666666;
+    text-decoration: none;
+    padding-bottom: 0;
+}
+#copyright p span{padding: .5rem;}
+
+/****************** popup ************************/
+
+#date-popup {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255,255,255, 0.9);
+    height: 100%;
+    padding-top: 3rem;
+}
+#date-popup .wrapper{
+    max-width: 68rem;
+    margin: 0 auto;
+}
+#date-popup h1{
+    padding-top: 2rem;
+    padding-bottom: 10rem;
+    color: #000;
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: 'montserratregular';
+}
+#date-popup #lbl-date{
+    display: block;
+    color: #d6be83;
+    font-size: 1.4rem;
+    font-family: 'montserratbold';
+    font-weight: 700;
+    padding-bottom: 2rem;
+    height: 7rem;
+}
+#date-popup form{
+    display: block;
+}
+#date-popup form input{
+    font-size: 2rem;
+    text-transform: uppercase;
+    width: 20%;
+    margin:0;
+    height: 7rem;
+    border: 0.2rem solid #d6be83;
+    border-right: none;
+    text-align: center;
+    font-family: 'sf_old_republicbold';
+    float: left;
+    margin-bottom: 3rem;
+}
+::-webkit-input-placeholder {color: #000;}
+:-moz-placeholder {color: #000;}
+::-moz-placeholder {color: #000;}
+:-ms-input-placeholder {color: #000;}
+
+#date-popup form input[type=submit]{
+    height: 7.4rem;
+    background-color: #d6be83;
+    color: #fff;
+    text-transform: uppercase;
+    border-right: 0.2rem solid #d6be83;
+    width: 37%;
+    transition-duration: .3s;
+}
+#date-popup form input[type=submit]:hover{
+     background-color:#fff;
+    color: #d6be83;   
+}
+#date-popup p, #date-popup p a{
+    font-family: 'montserratregular';
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    color: #000;
+}
+#date-popup label{cursor: pointer;}
+#date-popup #check-cont{
+    font-family: 'montserratregular';
+    color: #d6be83;
+    font-size: 1.3rem;
+    margin-bottom: 5rem;
+}
+#date-popup #check-cont input[type=checkbox]{
+    display: none;
+}
+#date-popup #check-cont input[type=checkbox]+label{
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
+    border: 0.2rem solid #d6be83;
+    vertical-align: middle;
+}
+#date-popup #check-cont input[type=checkbox]:checked+label{
+    background-image: url(../images/checked-bg.png);
+    background-size: cover;
+    background-position: center center;
+}
+#date-popup .error-msg{
+    color: red;
+    display: none;
+}
+/****************** media ************************/
+
+@media(max-width:1200px){
+    #images div:last-child{width: 36%;}
+    header nav ul li{padding-left: 2rem;}
+    #copyright p, #copyright a{
+        font-size: 1.2rem;
+        line-height: 2.2rem;
+    }
+}
+
+@media(max-width:992px){
+    #date-popup #check-cont{margin-bottom: 2rem;}
+    #date-popup{padding-top: 1rem;}
+    #date-popup #lbl-date{height: 5rem;}
+    #date-popup img{width: 100%;}
+    #date-popup h1{
+        font-size: 2rem;
+        padding-bottom: 2rem;
+    }
+    br{display: none;}
+    .mob-show{
+        display: initial;
+    }   
+    .mob-hide{
+        display: none;
+    }
+    #jumbotron{margin-top: 6rem;}
+    header #logo img, #menu-logo img{
+        height: 2rem;
+        padding-top: 1rem;
+    }
+    header #logo img{
+        width: auto;
+        padding-top: 0;
+    }
+    #jumbotron .wrapper, #sporting-conn .wrapper{
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        flex-direction: column;
+    }
+    #sporting-conn .bottle img, #jumbotron .bottle img{
+        width: 100%;
+        margin-right: 0;
+    }
+    #jumbotron .headings, #sporting-conn .headings{padding-top: 0;}
+    #jumbotron .headings h2{font-size: 1.2rem}
+    #jumbotron .headings h1{font-size: 3.4rem;}
+    #jumbotron p{font-size: 1rem;}
+    #jumbotron #sport-logo{
+        width: 3rem;
+        margin-bottom: 3rem;
+    }
+    #till-story{
+        padding: 3rem 0;
+    }
+    #till-story .wrapper{
+        border-left: none;
+        border-right: none;        
+    }
+    #till-story p, #sporting-conn p{font-size: 1rem;}
+    #images div{
+        display: block;
+        width: 100% !important;
+    }
+    #sporting-conn h2{font-size: 2.5rem;}
+    #sporting-conn h3{font-size: 1.6rem;}
+    footer ul li {
+       display: block;
+       margin: 2.5rem;
+    }
+    header nav {
+        background-image: url(../images/jumbotron-bg.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 0 100%;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        height: 100%;
+        background-color: #d6be83;
+        top: 0;
+        box-sizing: border-box;
+        padding: 1rem;        
+    }
+    .wrapper{padding: 0 1rem;}
+    header nav ul{
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        margin-top: 2rem;
+        height: 8rem;
+        height: auto;
+    }
+    header nav ul li{
+        width: 100%;
+        text-align: center;
+    }
+    header nav ul li a:hover, header nav ul li a.active{
+        border-bottom: .2rem solid #c2ad77;
+        color: #000;
+    }
+    header nav ul li:first-child a{
+        border-top: .2rem solid #c2ad77;
+    }
+    header nav ul li a{
+        display: block;
+        border-bottom: .2rem solid #c2ad77;
+        padding-top: 1rem;
+    }
+}
